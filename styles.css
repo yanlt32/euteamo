@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fef8fa;
+    color: #4a2c5b;
+    overflow-x: hidden;
+}
+
+.book-cover {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #ffe6ec, #e8d6f0);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.book-content {
+    position: relative;
+}
+
+.book-cover h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+    color: #4a2c5b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover p {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.book-cover button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1em;
+    background: #f7c1d0;
+    color: #4a2c5b;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.book-cover button:hover {
+    transform: scale(1.05);
+}
+
+/* Medidor de Amor */
+.love-meter {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.love-meter p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+}
+
+.meter {
+    width: 200px;
+    height: 20px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px auto;
+    border: 2px solid #f7c1d0;
+}
+
+.meter-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f7c1d0, #ff99cc);
+    animation: fillMeter 2s ease-in-out;
+}
+
+@keyframes fillMeter {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* Livro */
+.book {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 30px;
+    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-image: linear-gradient(to right, #f9f1f5 50%, #fff 50%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    max-height: 90vh;
+    background: transparent;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    transform: translateX(100vw);
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.page.left-page {
+    transform-origin: right;
+}
+
+.page.right-page {
+    transform-origin: left;
+}
+
+.page.active {
+    transform: translateX(0);
+}
+
+.page.hidden {
+    transform: translateX(100vw);
+}
+
+.page-content {
+    background: #fff;
+    border: 4px solid #f7c1d0;
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/lace.png');
+    background-size: cover;
+    opacity: 0.97;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-content::before {
+    content: '💞';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
+    color: #ff99cc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.page img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 3px solid #ffe6ec;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.page h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #4a2c5b;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.page .text-content {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.page .text-content p {
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+.page .text-content.truncated p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Show only 4 lines initially */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.page .text-content.truncated p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, #fff 80%);
+    pointer-events: none;
+}
+
+.page .date {
+    font-size: 1.1em;
+    color: #4a2c5b;
+    margin-top: 20px;
+    display: block;
+    font-style: italic;
+    text-align: center;
+}
+
+.read-more-btn {
+    margin: 15px auto 0;
+    padding: 8px 16px;
+    font-size: 1em;
+    background: #f7c1d0;
+    color: #4a2c5b;
+    border: 2px solid #ffe6ec;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    display: block;
+}
+
+.read-more-btn:hover {
+    transform: scale(1.05);
+    background: #ff99cc;
+}
+
+.nav-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f7c1d0;
+    color: #4a2c5b;
+    border: 2px solid #fff;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.8em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 100;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.prev-page {
+    left: 20px;
+}
+
+.next-page {
+    right: 20px;
+}
+
+/* Animais */
+.bird {
+    position: fixed;
+    font-size: 2em;
+    animation: fly 10s infinite linear;
+}
+
+.cat {
+    position: fixed;
+    font-size: 2em;
+    bottom: 20px;
+    animation: walk 15s infinite linear;
+}
+
+.butterfly {
+    position: fixed;
+    font-size: 1.5em;
+    animation: flutter 12s infinite linear;
+}
+
+@keyframes fly {
+    0% { transform: translateX(-100vw) translateY(20vh); }
+    100% { transform: translateX(100vw) translateY(10vh); }
+}
+
+@keyframes walk {
+    0% { transform: translateX(-100vw); }
+    100% { transform: translateX(100vw); }
+}
+
+@keyframes flutter {
+    0% { transform: translateX(-100vw) translateY(30vh); }
+    50% { transform: translateX(50vw) translateY(15vh); }
+    100% { transform: translateX(100vw) translateY(30vh); }
+}
+
+/* Corações Animados */
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.heart {
+    position: fixed;
+    color: #ff99cc;
+    font-size: 1em;
+    animation: float 4s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .book-cover {
+        padding: 40px 15px;
+    }
+    .book-cover h1 {
+        font-size: 2.2em;
+    }
+    .book-cover p {
+        font-size: 1em;
+    }
+    .book-cover button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .love-meter p {
+        font-size: 1.2em;
+    }
+    .meter {
+        width: 150px;
+        height: 15px;
+    }
+    .book {
+        padding: 20px;
+    }
+    .page {
+        width: 95%;
+        max-height: 85vh;
+    }
+    .page-content {
+        padding: 25px;
+        border-width: 3px;
+    }
+    .page-content::before {
+        font-size: 1.5em;
+        top: 10px;
+        right: 10px;
+    }
+    .page h2 {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+    .page .text-content p {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+    .page .date {
+        font-size: 0.9em;
+    }
+    .page img {
+        max-height: 250px;
+        margin-bottom: 15px;
+    }
+    .read-more-btn {
+        padding: 7px 14px;
+        font-size: 0.9em;
+    }
+    .nav-button {
+        padding: 12px;
+        font-size: 1.4em;
+    }
+    .prev-page {
+        left: 15px;
+    }
+    .next-page {
+        right: 15px;
+    }
+    .bird, .cat, .butterfly {
+        font-size: 1.2em;
+    }
+    .heart {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    .book-cover {
+        padding: 30px 10px;
+    }
+    .book-cover h1 {
+        font-size: 1.8em;
+    }
+    .book-cover p {
+        font-size: 0.85em;
+    }
+    .book-cover button {
+        padding: 8px 16px;
+        font-size: 0.8em;
+    }
+    .love-meter p {
+        font-size: 1em;
+    }
+    .meter {
+        width: 120px;
+        height: 12px;
+    }
+    .book {
+        padding: 15px;
+    }
+    .page {
+        width: 90%;
+        max-height: 80vh;
+    }
+    .page-content {
+        padding: 20px;
+    }
+    .page-content::before {
+        font-size: 1.2em;
+    }
+    .page h2 {
+        font-size: 1.8em;
+        margin-bottom: 12px;
+    }
+    .page .text-content p {
+        font-size: 0.95em;
+        line-height: 1.4;
+    }
+    .page .text-content.truncated p {
+        -webkit-line-clamp: 3; /* Show fewer lines on smaller screens */
+    }
+    .page .date {
+        font-size: 0.8em;
+    }
+    .page img {
+        max-height: 200px;
+        margin-bottom: 12px;
+    }
+    .read-more-btn {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+    .nav-button {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+    .prev-page {
+        left: 10px;
+    }
+    .next-page {
+        right: 10px;
+    }
+    .bird, .cat, .butterfly {
+        font-size: 1em;
+    }
+    .heart {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 400px) {
+    .book-cover {
+        padding: 20px 10px;
+    }
+    .book-cover h1 {
+        font-size: 1.5em;
+    }
+    .book-cover p {
+        font-size: 0.75em;
+    }
+    .book-cover button {
+        padding: 6px 12px;
+        font-size: 0.75em;
+    }
+    .love-meter p {
+        font-size: 0.9em;
+    }
+    .meter {
+        width: 100px;
+        height: 10px;
+    }
+    .book {
+        padding: 10px;
+    }
+    .page {
+        width: 88%;
+        max-height: 75vh;
+    }
+    .page-content {
+        padding: 15px;
+    }
+    .page-content::before {
+        font-size: 1em;
+        top: 8px;
+        right: 8px;
+    }
+    .page h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .page .text-content p {
+        font-size: 0.9em;
+        line-height: 1.3;
+    }
+    .page .text-content.truncated p {
+        -webkit-line-clamp: 3;
+    }
+    .page .date {
+        font-size: 0.75em;
+    }
+    .page img {
+        max-height: 180px;
+        margin-bottom: 10px;
+    }
+    .read-more-btn {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    .nav-button {
+        padding: 8px;
+        font-size: 1em;
+    }
+    .prev-page {
+        left: 8px;
+    }
+    .next-page {
+        right: 8px;
+    }
+}

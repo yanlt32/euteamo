@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livro de Cartas para Juliana</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Capa do Livro -->
+    <header class="book-cover">
+      <h1>Livro de Cartas para Juliana</h1>
+      <p>Nosso amor em cada página, Ju. 💖</p>
+      <p id="days-together">Juntos há <span id="days-count">0</span> dias!</p>
+      <div class="love-meter">
+        <p>Nosso amor:</p>
+        <div class="meter">
+          <div class="meter-fill"></div>
+        </div>
+        <p>100% 💕</p>
+      </div>
+      <button onclick="openBook()">Abrir o Livro</button>
+    </header>
+
+    <!-- Livro -->
+    <section id="book" class="book hidden">
+      <div class="book-container">
+        <div class="page left-page" id="page-0">
+          <div class="page-content">
+            <h2>Carta 1: O Dia que Tudo Começou</h2>
+            <img
+              src="img/Imagem do WhatsApp de 2025-04-02 à(s) 23.59.24_856b9bb2.jpg"
+              alt="Nosso primeiro encontro"
+            />
+            <p>
+              Te amar não é apenas escrever cartas no papel. Te amar é olhar o
+              nascer do sol e perceber quem realmente brilha mais. Te ouvir e te
+              olhar são como ondas de um mar: o som que conforta, o olhar que
+              ilumina, uma mistura de calmaria e intensidade. O estresse e a paz
+              parecem andar lado a lado quando penso em você. Seu corpo e seus
+              cabelos, com curvas únicas, disputam quem me faz perder o fôlego
+              primeiro. Mas o mais incrível de tudo isso é saber que essa
+              mulher, tão única e especial, é com quem quero compartilhar a vida
+            </p>
+            <span class="date">14/01/2025</span>
+          </div>
+        </div>
+        <div class="page right-page hidden" id="page-1">
+          <div class="page-content">
+            <h2>Carta 2: Nosso Primeiro Abraço</h2>
+            <img
+              src="img/Imagem do WhatsApp de 2025-04-03 à(s) 00.00.09_b7e4c0cc.jpg"
+              alt="Primeiro abraço"
+            />
+            <div class="text-content truncated">
+              <p>
+                Já escrevi sobre muitas coisas, mas hoje quero falar sobre o quão
+                especial é ter você na minha vida. Às vezes, é difícil lidar com
+                você, mas aprendi que quanto mais tempo passo ao seu lado, mais
+                experiências eu ganho. Uma hora estamos felizes, outra tristes;
+                brigamos, rimos, somos felizes, mas também somos teimosos. É
+                incrível ter alguém que rebate cada palavra minha com argumentos.
+                Sei que posso ser mimado, ciumento e chato. Posso ser tudo isso,
+                mas esse "tudo" faz parte de nós. Ser e ter é algo muito maluco.
+                Uma hora eu quero ser o melhor namorado, outra quero ser o melhor
+                marido. Uma hora eu quero ter—ter todo o dinheiro do mundo para te
+                dar o carro rosa mais bonito que existe, ou o poder de ver o
+                futuro. Queria nos ver em uma casa, num friozinho, comendo e
+                assistindo a um filme de romance. Aliás, eu nem gosto tanto, mas
+                me esforçaria para ver até o pior filme de romance, só porque para
+                você seria o máximo. E Juju, hoje eu escrevo essa carta porque sei
+                que estaremos juntos por muito tempo. De fevereiro a fevereiro,
+                enfrentaremos juntos os desafios da vida. Lutaremos contra o
+                monstro mais forte que possa existir, porque, com você ao meu
+                lado, eu me sinto mais forte. Você me dá forças, e eu sei que
+                ultimamente preciso muito disso…
+              </p>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <span class="date">14/02/2025</span>
+          </div>
+        </div>
+        <div class="page left-page hidden" id="page-2">
+          <div class="page-content">
+            <h2>Carta 3: O Dia que Rimos Até Chorar</h2>
+            <img
+              src="img/Imagem do WhatsApp de 2025-04-03 à(s) 00.00.19_86722d39.jpg"
+              alt="Dia engraçado"
+            />
+            <p>
+              Você é minha alegria, Ju. Lembra da gente rindo até doer a
+              barriga? 😊
+            </p>
+            <span class="date">14/03/2025</span>
+          </div>
+        </div>
+        <div class="page right-page hidden" id="page-3">
+          <div class="page-content">
+            <h2>Nossos Sonhos</h2>
+            <div class="text-content truncated">
+              <p>
+                Já escrevi sobre muitas coisas, mas hoje quero falar sobre o quão
+                especial é ter você na minha vida. Às vezes, é difícil lidar com
+                você, mas aprendi que quanto mais tempo passo ao seu lado, mais
+                experiências eu ganho. Uma hora estamos felizes, outra tristes;
+                brigamos, rimos, somos felizes, mas também somos teimosos. É
+                incrível ter alguém que rebate cada palavra minha com argumentos.
+                Sei que posso ser mimado, ciumento e chato. Posso ser tudo isso,
+                mas esse "tudo" faz parte de nós. Ser e ter é algo muito maluco.
+                Uma hora eu quero ser o melhor namorado, outra quero ser o melhor
+                marido. Uma hora eu quero ter—ter todo o dinheiro do mundo para te
+                dar o carro rosa mais bonito que existe, ou o poder de ver o
+                futuro. Queria nos ver em uma casa, num friozinho, comendo e
+                assistindo a um filme de romance. Aliás, eu nem gosto tanto, mas
+                me esforçaria para ver até o pior filme de romance, só porque para
+                você seria o máximo. E Juju, hoje eu escrevo essa carta porque sei
+                que estaremos juntos por muito tempo. De fevereiro a fevereiro,
+                enfrentaremos juntos os desafios da vida. Lutaremos contra o
+                monstro mais forte que possa existir, porque, com você ao meu
+                lado, eu me sinto mais forte. Você me dá forças, e eu sei que
+                ultimamente preciso muito disso…
+              </p>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <span class="date">26/05/2025</span>
+          </div>
+        </div>
+      </div>
+      <button class="nav-button prev-page" onclick="prevPage()">←</button>
+      <button class="nav-button next-page" onclick="nextPage()">→</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
