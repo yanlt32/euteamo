@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Livro de Cartas para Juliana</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="img/image.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/image.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap"
       rel="stylesheet"
@@ -33,10 +33,7 @@
         <div class="page left-page" id="page-0">
           <div class="page-content">
             <h2>Carta 1: O Dia que Tudo Começou</h2>
-            <img
-              src="img/1.jpg"
-              alt="Nosso primeiro encontro"
-            />
+            <img src="img/1.jpg" alt="Nosso primeiro encontro" />
             <p>
               Te amar não é apenas escrever cartas no papel. Te amar é olhar o
               nascer do sol e perceber quem realmente brilha mais. Te ouvir e te
@@ -48,206 +45,468 @@
               mulher, tão única e especial, é com quem quero compartilhar a vida
             </p>
             <span class="date">14/01/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-0">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page right-page hidden" id="page-1">
           <div class="page-content">
             <h2>Carta 2: Nosso Primeiro Abraço</h2>
-            <img
-              src="img/2.jpg"
-              alt="Primeiro abraço"
-            />
+            <img src="img/2.jpg" alt="Primeiro abraço" />
             <div class="text-content truncated">
               <p>
-                Já escrevi sobre muitas coisas, mas hoje quero falar sobre o quão
-                especial é ter você na minha vida. Às vezes, é difícil lidar com
-                você, mas aprendi que quanto mais tempo passo ao seu lado, mais
-                experiências eu ganho. Uma hora estamos felizes, outra tristes;
-                brigamos, rimos, somos felizes, mas também somos teimosos. É
-                incrível ter alguém que rebate cada palavra minha com argumentos.
-                Sei que posso ser mimado, ciumento e chato. Posso ser tudo isso,
-                mas esse "tudo" faz parte de nós. Ser e ter é algo muito maluco.
-                Uma hora eu quero ser o melhor namorado, outra quero ser o melhor
-                marido. Uma hora eu quero ter—ter todo o dinheiro do mundo para te
-                dar o carro rosa mais bonito que existe, ou o poder de ver o
-                futuro. Queria nos ver em uma casa, num friozinho, comendo e
-                assistindo a um filme de romance. Aliás, eu nem gosto tanto, mas
-                me esforçaria para ver até o pior filme de romance, só porque para
-                você seria o máximo. E Juju, hoje eu escrevo essa carta porque sei
-                que estaremos juntos por muito tempo. De fevereiro a fevereiro,
-                enfrentaremos juntos os desafios da vida. Lutaremos contra o
-                monstro mais forte que possa existir, porque, com você ao meu
-                lado, eu me sinto mais forte. Você me dá forças, e eu sei que
-                ultimamente preciso muito disso…
+                Já escrevi sobre muitas coisas, mas hoje quero falar sobre o
+                quão especial é ter você na minha vida. Às vezes, é difícil
+                lidar com você, mas aprendi que quanto mais tempo passo ao seu
+                lado, mais experiências eu ganho. Uma hora estamos felizes,
+                outra tristes; brigamos, rimos, somos felizes, mas também somos
+                teimosos. É incrível ter alguém que rebate cada palavra minha
+                com argumentos. Sei que posso ser mimado, ciumento e chato.
+                Posso ser tudo isso, mas esse "tudo" faz parte de nós. Ser e ter
+                é algo muito maluco. Uma hora eu quero ser o melhor namorado,
+                outra quero ser o melhor marido. Uma hora eu quero ter—ter todo
+                o dinheiro do mundo para te dar o carro rosa mais bonito que
+                existe, ou o poder de ver o futuro. Queria nos ver em uma casa,
+                num friozinho, comendo e assistindo a um filme de romance.
+                Aliás, eu nem gosto tanto, mas me esforçaria para ver até o pior
+                filme de romance, só porque para você seria o máximo. E Juju,
+                hoje eu escrevo essa carta porque sei que estaremos juntos por
+                muito tempo. De fevereiro a fevereiro, enfrentaremos juntos os
+                desafios da vida. Lutaremos contra o monstro mais forte que
+                possa existir, porque, com você ao meu lado, eu me sinto mais
+                forte. Você me dá forças, e eu sei que ultimamente preciso muito
+                disso…
               </p>
             </div>
-            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">
+              Ler Mais
+            </button>
             <span class="date">14/02/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-1">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page left-page hidden" id="page-2">
           <div class="page-content">
             <h2>Carta 3: O Dia que Rimos Até Chorar</h2>
-            <img
-              src="img/3.jpg"
-              alt="Dia engraçado"
-            />
+            <img src="img/3.jpg" alt="Dia engraçado" />
             <p>
               Você é minha alegria, Ju. Lembra da gente rindo até doer a
               barriga? 😊
             </p>
             <span class="date">14/03/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-2">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page right-page hidden" id="page-3">
           <div class="page-content">
             <h2>Carta 4: Nossos Sonhos</h2>
-            <img
-              src="img/4.jpg"
-              alt="Nossos sonhos"
-            />
+            <img src="img/4.jpg" alt="Nossos sonhos" />
             <div class="text-content truncated">
               <p>
-                Já escrevi sobre muitas coisas, mas hoje quero falar sobre o quão
-                especial é ter você na minha vida. Às vezes, é difícil lidar com
-                você, mas aprendi que quanto mais tempo passo ao seu lado, mais
-                experiências eu ganho. Uma hora estamos felizes, outra tristes;
-                brigamos, rimos, somos felizes, mas também somos teimosos. É
-                incrível ter alguém que rebate cada palavra minha com argumentos.
-                Sei que posso ser mimado, ciumento e chato. Posso ser tudo isso,
-                mas esse "tudo" faz parte de nós. Ser e ter é algo muito maluco.
-                Uma hora eu quero ser o melhor namorado, outra quero ser o melhor
-                marido. Uma hora eu quero ter—ter todo o dinheiro do mundo para te
-                dar o carro rosa mais bonito que existe, ou o poder de ver o
-                futuro. Queria nos ver em uma casa, num friozinho, comendo e
-                assistindo a um filme de romance. Aliás, eu nem gosto tanto, mas
-                me esforçaria para ver até o pior filme de romance, só porque para
-                você seria o máximo. E Juju, hoje eu escrevo essa carta porque sei
-                que estaremos juntos por muito tempo. De fevereiro a fevereiro,
-                enfrentaremos juntos os desafios da vida. Lutaremos contra o
-                monstro mais forte que possa existir, porque, com você ao meu
-                lado, eu me sinto mais forte. Você me dá forças, e eu sei que
-                ultimamente preciso muito disso…
+                Já escrevi sobre muitas coisas, mas hoje quero falar sobre o
+                quão especial é ter você na minha vida. Às vezes, é difícil
+                lidar com você, mas aprendi que quanto mais tempo passo ao seu
+                lado, mais experiências eu ganho. Uma hora estamos felizes,
+                outra tristes; brigamos, rimos, somos felizes, mas também somos
+                teimosos. É incrível ter alguém que rebate cada palavra minha
+                com argumentos. Sei que posso ser mimado, ciumento e chato.
+                Posso ser tudo isso, mas esse "tudo" faz parte de nós. Ser e ter
+                é algo muito maluco. Uma hora eu quero ser o melhor namorado,
+                outra quero ser o melhor marido. Uma hora eu quero ter—ter todo
+                o dinheiro do mundo para te dar o carro rosa mais bonito que
+                existe, ou o poder de ver o futuro. Queria nos ver em uma casa,
+                num friozinho, comendo e assistindo a um filme de romance.
+                Aliás, eu nem gosto tanto, mas me esforçaria para ver até o pior
+                filme de romance, só porque para você seria o máximo. E Juju,
+                hoje eu escrevo essa carta porque sei que estaremos juntos por
+                muito tempo. De fevereiro a fevereiro, enfrentaremos juntos os
+                desafios da vida. Lutaremos contra o monstro mais forte que
+                possa existir, porque, com você ao meu lado, eu me sinto mais
+                forte. Você me dá forças, e eu sei que ultimamente preciso muito
+                disso…
               </p>
             </div>
-            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">
+              Ler Mais
+            </button>
             <span class="date">26/05/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-3">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page left-page hidden" id="page-4">
           <div class="page-content">
             <h2>Carta 5: A Noite das Estrelas</h2>
-            <img
-              src="img/5.jpg"
-              alt="Noite sob as estrelas"
-            />
+            <img src="img/5.jpg" alt="Noite sob as estrelas" />
             <p>
-              Ju, lembra daquela noite que passamos olhando as estrelas? Cada uma parecia brilhar só para nós, mas nenhuma delas chega aos pés do brilho dos seus olhos. Te amo, minha constelação. ✨
+              Ju, lembra daquela noite que passamos olhando as estrelas? Cada
+              uma parecia brilhar só para nós, mas nenhuma delas chega aos pés
+              do brilho dos seus olhos. Te amo, minha constelação. ✨
             </p>
             <span class="date">14/06/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-4">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  No Dia dos Namorados, te dei três presentes: 🌸💌🍫. Junte as
+                  palavras na ordem dos emojis para desbloquear a carta!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkDiaDosNamoradosPassword(this)">
+                  Desbloquear
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page right-page hidden" id="page-5">
           <div class="page-content">
             <h2>Carta 6: Nossas Aventuras</h2>
-            <img
-              src="img/6.jpg"
-              alt="Nossas aventuras"
-            />
+            <img src="img/6.jpg" alt="Nossas aventuras" />
             <div class="text-content truncated">
               <p>
-                Minha Ju, cada aventura com você é uma história que quero contar para sempre. Seja uma viagem improvisada, um café na esquina ou apenas nossos momentos roubados no meio da rotina, tudo com você ganha cor. Às vezes, brigamos por besteiras, mas até isso me ensina a te amar mais. Quero explorar o mundo com você, mas, mais ainda, quero construir um mundo nosso, onde cada dia é uma nova página. Você é minha parceira de todas as jornadas, e eu não trocaria isso por nada.
+                Minha Ju, cada aventura com você é uma história que quero contar
+                para sempre. Seja uma viagem improvisada, um café na esquina ou
+                apenas nossos momentos roubados no meio da rotina, tudo com você
+                ganha cor. Às vezes, brigamos por besteiras, mas até isso me
+                ensina a te amar mais. Quero explorar o mundo com você, mas,
+                mais ainda, quero construir um mundo nosso, onde cada dia é uma
+                nova página. Você é minha parceira de todas as jornadas.
               </p>
             </div>
-            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">
+              Ler Mais
+            </button>
             <span class="date">14/07/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-5">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page left-page hidden" id="page-6">
           <div class="page-content">
             <h2>Carta 7: O Som do Seu Riso</h2>
-            <img
-              src="img/7.jpg"
-              alt="Seu riso"
-            />
+            <img src="img/7.jpg" alt="Seu riso" />
             <p>
-              Seu riso, Ju, é a trilha sonora da minha vida. Cada gargalhada sua me faz querer ser uma pessoa melhor, só para te ver sorrir mais. 😄
+              Seu riso, Ju, é a trilha sonora da minha vida. Cada gargalhada sua
+              me faz querer ser uma pessoa melhor, só para te ver sorrir mais.
+              😄
             </p>
             <span class="date">14/08/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-6">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page right-page hidden" id="page-7">
           <div class="page-content">
             <h2>Carta 8: Quando Você Me Salvou</h2>
-            <img
-              src="img/8.jpg"
-              alt="Quando você me salvou"
-            />
+            <img src="img/8.jpg" alt="Quando você me salvou" />
             <div class="text-content truncated">
               <p>
-                Juju, teve dias em que eu achei que não ia conseguir. Mas você, com seu jeito único, me puxou de volta. Seu apoio, suas palavras, até suas broncas me fizeram mais forte. Você é meu porto seguro, minha razão para continuar. Quero ser isso para você também, sempre. Te amo por me fazer acreditar em mim mesmo, mesmo quando eu duvido.
+                Juju, teve dias em que eu achei que não ia conseguir. Mas você,
+                com seu jeito único, me puxou de volta. Seu apoio, suas
+                palavras, até suas broncas me fizeram mais forte. Você é meu
+                porto seguro, minha razão para continuar. Quero ser isso para
+                você também, sempre. Te amo por me fazer acreditar em mim mesmo,
+                mesmo quando eu duvido.
               </p>
             </div>
-            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">
+              Ler Mais
+            </button>
             <span class="date">14/09/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-7">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page left-page hidden" id="page-8">
           <div class="page-content">
             <h2>Carta 9: Nosso Cantinho</h2>
-            <img
-              src="img/9.jpg"
-              alt="Nosso cantinho"
-            />
+            <img src="img/9.jpg" alt="Nosso cantinho" />
             <p>
-              Ju, sonhar com nosso cantinho é o que me move. Um lugar só nosso, com você dançando na cozinha e eu te admirando. Te amo, minha casa. 🏡
+              Ju, sonhar com nosso cantinho é o que me move. Um lugar só nosso,
+              com você dançando na cozinha e eu te admirando. Te amo, minha
+              casa. 🏡
             </p>
             <span class="date">14/10/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-8">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page right-page hidden" id="page-9">
           <div class="page-content">
             <h2>Carta 10: O Poder do Seu Olhar</h2>
-            <img
-              src="img/10.jpg"
-              alt="O poder do seu olhar"
-            />
+            <img src="img/10.jpg" alt="O poder do seu olhar" />
             <div class="text-content truncated">
               <p>
-                Seu olhar, Ju, tem o poder de parar o tempo. Quando você me olha, sinto que o mundo pode esperar, porque tudo que importa está bem na minha frente. Você me desafia, me acalma, me faz querer ser mais. Quero passar a vida inteira perdido nesses olhos que me dizem tanto sem falar nada.
+                Seu olhar, Ju, tem o poder de parar o tempo. Quando você me
+                olha, sinto que o mundo pode esperar, porque tudo que importa
+                está bem na minha frente. Você me desafia, me acalma, me faz
+                querer ser mais. Quero passar a vida inteira perdido nesses
+                olhos que me dizem tanto sem falar nada.
               </p>
             </div>
-            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">
+              Ler Mais
+            </button>
             <span class="date">14/11/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-9">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page left-page hidden" id="page-10">
           <div class="page-content">
             <h2>Carta 11: Nosso Inverno</h2>
-            <img
-              src="img/11.jpg"
-              alt="Nosso inverno"
-            />
+            <img src="img/11.jpg" alt="Nosso inverno" />
             <p>
-              Ju, o frio do inverno não assusta quando estou com você. Seu calor me faz sentir em casa, não importa onde estamos. Te amo, meu cobertor. ❄️
+              Ju, o frio do inverno não assusta quando estou com você. Seu calor
+              me faz sentir em casa, não importa onde estamos. Te amo, meu
+              cobertor. ❄️
             </p>
             <span class="date">14/12/2025</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-10">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="page right-page hidden" id="page-11">
           <div class="page-content">
             <h2>Carta 12: Um Ano de Nós</h2>
-            <img
-              src="img/12.jpg"
-              alt="Um ano de nós"
-            />
+            <img src="img/12.jpg" alt="Um ano de nós" />
             <div class="text-content truncated">
               <p>
-                Juju, um ano se passou desde a primeira carta, e meu amor por você só cresceu. Cada dia com você é uma aventura, um aprendizado, uma promessa. Quero escrever mais capítulos dessa nossa história, porque com você, cada página é mais bonita que a anterior. Te amo hoje, amanhã e para sempre.
+                Juju, um ano se passou desde a primeira carta, e meu amor por
+                você só cresceu. Cada dia com você é uma aventura, um
+                aprendizado, uma promessa. Quero escrever mais capítulos dessa
+                nossa história, porque com você, cada página é mais bonita que a
+                anterior. Te amo hoje, amanhã e para sempre.
               </p>
             </div>
-            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler Mais</button>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">
+              Ler Mais
+            </button>
             <span class="date">14/01/2026</span>
+            <div class="coming-soon-card hidden">
+              <h3>Em Breve, Juju! 💌</h3>
+              <p class="countdown" id="countdown-11">
+                Contagem regressiva: <span class="timer"></span>
+              </p>
+              <div class="milestone-message hidden">
+                Feliz <span class="month-count"></span> Meses, Juju!
+              </div>
+              <div class="unlock-section hidden">
+                <p>
+                  O que brilha mais que o sol, acalma como o mar, e é só meu e
+                  seu? Digite para desbloquear!
+                </p>
+                <input
+                  type="text"
+                  class="unlock-input"
+                  placeholder="Sua resposta"
+                />
+                <button onclick="checkUnlock(this)">Desbloquear</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -93,8 +93,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 30px;
-    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-    background-image: linear-gradient(to right, #f9f1f5 50%, #fff 50%);
+    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png'), linear-gradient(to right, #f9f1f5 50%, #fff 50%);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -124,7 +123,7 @@ body {
     transform: translateX(100vw);
     transition: transform 0.8s ease-in-out;
     transform-style: preserve-3d;
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    overflow-y: auto;
 }
 
 .page.left-page {
@@ -157,6 +156,134 @@ body {
     justify-content: center;
     position: relative;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-content.locked .coming-soon-card {
+    display: flex;
+}
+
+.page-content.locked h2,
+.page-content.locked img,
+.page-content.locked p,
+.page-content.locked .text-content,
+.page-content.locked .read-more-btn {
+    display: none;
+}
+
+.coming-soon-card {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffe6ec, #f7c1d0);
+    border: 3px solid #ff99cc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Estilo especial para a Carta 5 (Dia dos Namorados) */
+#page-4 .coming-soon-card {
+    background: linear-gradient(135deg, #ffe6ec, #ff6f91);
+}
+
+.coming-soon-card h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #4a2c5b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.coming-soon-card .countdown {
+    font-size: 1.2em;
+    color: #333;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.coming-soon-card .milestone-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: #4a2c5b;
+    margin: 15px 0;
+    display: none;
+}
+
+.coming-soon-card .unlock-section {
+    display: none;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.coming-soon-card .unlock-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.coming-soon-card .unlock-section input {
+    padding: 8px;
+    font-size: 1em;
+    border: 2px solid #ff99cc;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    color: #4a2c5b;
+}
+
+.coming-soon-card .unlock-section button {
+    padding: 8px 16px;
+    font-size: 1em;
+    background: #f7c1d0;
+    color: #4a2c5b;
+    border: 2px solid #ffe6ec;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.coming-soon-card .unlock-section button:hover {
+    transform: scale(1.05);
+    background: #ff99cc;
+}
+
+.coming-soon-card::before {
+    content: '✨';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5em;
+    color: #ff99cc;
+    animation: sparkle 2s infinite;
+}
+
+.coming-soon-card::after {
+    content: '💖';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #ff99cc;
+    animation: floatSmall 3s infinite;
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+@keyframes floatSmall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-20px); opacity: 0.5; }
 }
 
 .page-content::before {
@@ -202,7 +329,7 @@ body {
 
 .page .text-content.truncated p {
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* Show only 4 lines initially */
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -328,7 +455,7 @@ body {
     display: none;
 }
 
-/* Responsive Design */
+/* Design Responsivo */
 @media (max-width: 800px) {
     .book-cover {
         padding: 40px 15px;
@@ -401,6 +528,21 @@ body {
     .heart {
         font-size: 0.8em;
     }
+    .coming-soon-card h3 {
+        font-size: 2em;
+    }
+    .coming-soon-card .countdown, .coming-soon-card .milestone-message {
+        font-size: 1em;
+    }
+    .coming-soon-card .unlock-section p {
+        font-size: 1em;
+    }
+    .coming-soon-card .unlock-section input, .coming-soon-card .unlock-section button {
+        font-size: 0.9em;
+    }
+    .coming-soon-card::before, .coming-soon-card::after {
+        font-size: 1.2em;
+    }
 }
 
 @media (max-width: 500px) {
@@ -446,7 +588,7 @@ body {
         line-height: 1.4;
     }
     .page .text-content.truncated p {
-        -webkit-line-clamp: 3; /* Show fewer lines on smaller screens */
+        -webkit-line-clamp: 3;
     }
     .page .date {
         font-size: 0.8em;
@@ -474,6 +616,21 @@ body {
     }
     .heart {
         font-size: 0.6em;
+    }
+    .coming-soon-card h3 {
+        font-size: 1.8em;
+    }
+    .coming-soon-card .countdown, .coming-soon-card .milestone-message {
+        font-size: 0.9em;
+    }
+    .coming-soon-card .unlock-section p {
+        font-size: 0.9em;
+    }
+    .coming-soon-card .unlock-section input, .coming-soon-card .unlock-section button {
+        font-size: 0.85em;
+    }
+    .coming-soon-card::before, .coming-soon-card::after {
+        font-size: 1em;
     }
 }
 
@@ -544,5 +701,20 @@ body {
     }
     .next-page {
         right: 8px;
+    }
+    .coming-soon-card h3 {
+        font-size: 1.5em;
+    }
+    .coming-soon-card .countdown, .coming-soon-card .milestone-message {
+        font-size: 0.8em;
+    }
+    .coming-soon-card .unlock-section p {
+        font-size: 0.8em;
+    }
+    .coming-soon-card .unlock-section input, .coming-soon-card .unlock-section button {
+        font-size: 0.8em;
+    }
+    .coming-soon-card::before, .coming-soon-card::after {
+        font-size: 0.9em;
     }
 }
